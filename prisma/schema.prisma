@@ -23,7 +23,7 @@ model Workflow {
   status        String
 
   createdAt     DateTime @default(now())
-  updateAt      DateTime @updatedAt
+  updatedAt     DateTime @updatedAt
 
   // User cannot have two workflows with the same name
   @@unique([name, userId])
