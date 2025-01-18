@@ -69,7 +69,16 @@ async function UserWorkflows() {
         )
     }
 
-    return <div></div>;
+    // return <div>
+    //     {workflows.map((workflow) => (
+    //         <div key={workflow.id}>
+    //             {/* Render content for each workflow */}
+    //             <h2>{workflow.name}</h2>
+    //             <p>{workflow.description}</p>
+    //         </div>
+    //     ))}
+    // </div>;
+    return <pre>{JSON.stringify(workflows,null,4)}</pre>
 }
 
 export default Workflows

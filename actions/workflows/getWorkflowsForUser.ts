@@ -17,6 +17,5 @@ export async function GetWorkflowsForUser() {
             createdAt: "asc"
         }
     })
-    console.log("Fetched workflows:", workflows);
     return workflows;
 }
