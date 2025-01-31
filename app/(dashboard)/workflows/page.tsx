@@ -5,6 +5,7 @@ import React, { Suspense } from 'react'
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { AlertCircle, InboxIcon } from 'lucide-react'
 import CreateWorkflowDialog from './_components/CreateWorkflowDialog'
+import WorkflowCard from './_components/WorkflowCard'
 
 const Workflows = () => {
   return (
@@ -69,16 +70,12 @@ async function UserWorkflows() {
         )
     }
 
-    // return <div>
-    //     {workflows.map((workflow) => (
-    //         <div key={workflow.id}>
-    //             {/* Render content for each workflow */}
-    //             <h2>{workflow.name}</h2>
-    //             <p>{workflow.description}</p>
-    //         </div>
-    //     ))}
-    // </div>;
-    return <pre>{JSON.stringify(workflows,null,4)}</pre>
+    return <div className="grid grid-cols-1 gap-4">
+        {workflows.map((workflow) => (
+            <WorkflowCard key={workflow.id} workflow={workflow} />
+        ))}
+    </div>;
+    // return <pre>{JSON.stringify(workflows,null,4)}</pre>
 }
 
 export default Workflows
