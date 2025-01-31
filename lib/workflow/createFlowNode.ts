@@ -8,7 +8,8 @@ export function CreateFlowNode (
 ): AppNode {
     return {
         id: uuidv4(),
-        type: "Node",
+        type: "FlowScrapeNode",
+        dragHandle: ".drag-handle",
         data: {
             type: nodeType,
             inputs: {},
